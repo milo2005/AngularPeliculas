@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-movies',
-  template: `
-    <p>
-      movies works!
-    </p>
-  `,
+  template: `<router-outlet></router-outlet>`,
   styles: []
 })
 export class MoviesComponent implements OnInit {
