@@ -1,5 +1,14 @@
 @import 'variables';
 
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
 @mixin lyContainer($size, $mt:0px) {    
     .container{
         width: $size;

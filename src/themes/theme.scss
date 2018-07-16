@@ -1,0 +1,26 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$appPrimary : mat-palette($mat-pink);
+$appSecondary : mat-palette($mat-amber);
+$appWarn : mat-palette($mat-red);
+
+$appTheme: mat-light-theme($appPrimary, $appSecondary, $appWarn);
+
+@include angular-material-theme($appTheme);
+
+/*$mapa : (
+    "rojo": #ff0000,
+    10: 10px,
+    "azul": #00ff00
+);
+
+$dimension : map-get($mapa, 10);
+
+$mapa2: (
+    "amarillo": #ffff00,
+    10: 10%
+);
+
+$mapa3: map-merge($mapa, $mapa2);*/

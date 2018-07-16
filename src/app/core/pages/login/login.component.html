@@ -1,10 +1,21 @@
-<div >
+<div fxLayout="row" fxLayoutAlign="start center" class="login">
+    
+    <div fxFlex="0 0 100%" 
+        fxFlex.gt-sm="0 0 50%" fxFlexOffset.gt-sm="25%" 
+        fxFlex.gt-md="0 0 30%" fxFlexOffset.gt-md="70%"
+        >
 
-    <div style="background: red">Contenido 1</div>
-    <div style="background: blue">Contenido 2</div>
-    <div style="background: yellow">Contenido 3</div>
-    <div style="background: green">Contenido 4</div>
-    <div style="background: violet">Contenido 5</div>
-    <div style="background: orange">Contenido 6</div>
-
+        <form #loginForm = "ngForm" fxLayout="row wrap">
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Usuario</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field appearance="outline" fxFlex="100%">
+                <mat-label>Contraseña</mat-label>
+                <input matInput type="password"> 
+            </mat-form-field>
+            <button mat-raised-button color="accent" fxFlex="50%">Registrate</button>
+            <button mat-stroked-button color="primary" fxFlex="50%">Entrar</button>
+        </form>
+    </div>
 </div>
