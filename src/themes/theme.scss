@@ -7,8 +7,13 @@ $appSecondary : mat-palette($mat-amber);
 $appWarn : mat-palette($mat-red);
 
 $appTheme: mat-light-theme($appPrimary, $appSecondary, $appWarn);
+$appDarkTheme:  mat-dark-theme($appPrimary, $appSecondary, $appWarn);
 
 @include angular-material-theme($appTheme);
+
+.dark-theme{
+    @include angular-material-theme($appDarkTheme);
+}
 
 /*$mapa : (
     "rojo": #ff0000,
