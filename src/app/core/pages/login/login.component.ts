@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SessionService } from '../../services/session.service';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +14,14 @@ export class LoginComponent implements OnInit {
 
   error = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private session: SessionService) { }
 
   ngOnInit() {
   }
 
   login() {
     if (this.username === 'admin' && this.password === 'admin') {
+      this.session.logged = true;
       this.router.navigate(['estrenos']);
     } else {
       this.error = true;
