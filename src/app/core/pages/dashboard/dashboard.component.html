@@ -1,7 +1,20 @@
-<p>
-  dashboard works!
-</p>
+<mat-sidenav-container class="dashboard">
+  <mat-sidenav #sideNav [mode]="(isPhone | async) ? 'over': 'side'" 
+    [opened]="!(isPhone | async)" 
+    fixedInViewport>
+    menu lateral
+  </mat-sidenav>
+  
+  <mat-sidenav-content class="dashboard-content">
+      <mat-toolbar color="primary">
+        <button mat-icon-button  *ngIf="isPhone | async" (click)="sideNav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        Estrenos
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
 
-<hr>
+</mat-sidenav-container>
 
-<router-outlet></router-outlet>
+
